@@ -1,0 +1,8 @@
+<% if @video.branch_id != 2 %>
+	<%= @video.url %>
+<% else %>
+	<% @videos_branch.each do |video| %>
+		<%= link_to video.id, video_path(video.id) %>
+	<% end %>
+<% end %>
+<%= link_to 'home', root_path  %>
